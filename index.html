@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Follow Me</title>
-
   <style>
     /* ===== GLOBAL ===== */
     body {
@@ -17,40 +16,22 @@
       align-items: center;
     }
 
-    /* ===== WAVE TEXT BOX ===== */
-    .title-box {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 15px 25px;
-      border-radius: 12px;
-      border: 2px solid white;
-      margin-bottom: 20px;
-      text-align: center;
-      width: 100%;
-      max-width: 350px;
-    }
-
-    .wave-title {
-      font-size: 1.6rem;
+    /* ===== TITLE ===== */
+    h1 {
       color: white;
-      margin: 0;
+      font-size: 2rem;
       text-align: center;
+      margin-bottom: 40px;
       line-height: 1.5;
     }
 
-    .subtitle {
-      color: white;
-      font-size: 1.2rem;
-      text-align: center;
-      margin-top: 10px;
-      line-height: 1.5;
-    }
-
-    /* ===== WAVE ANIMATION ===== */
+    /* Wave animation for welcome text */
     .wave span {
       display: inline-block;
       animation: wave 1.5s infinite;
     }
 
+    /* Add delay for each letter for wave effect */
     .wave span:nth-child(1) { animation-delay: 0s; }
     .wave span:nth-child(2) { animation-delay: 0.05s; }
     .wave span:nth-child(3) { animation-delay: 0.1s; }
@@ -97,17 +78,6 @@
       30% { transform: translateY(-15px); }
     }
 
-    /* ===== MOBILE ADJUSTMENTS ===== */
-    @media (max-width: 480px) {
-      .wave-title {
-        font-size: 1.3rem;
-      }
-      .title-box {
-        padding: 10px 15px;
-        max-width: 90%;
-      }
-    }
-
     /* ===== GALLERY CONTAINER ===== */
     .container {
       width: 100%;
@@ -127,7 +97,7 @@
       border-radius: 12px;
       cursor: pointer;
       border: 2px solid #eee;
-      box-shadow: 5px 10px 15px rgba(0,0,0,0.4), -2px -5px 10px rgba(0,0,0,0.1);
+      box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4), -2px -5px 10px rgba(0, 0, 0, 0.1);
       transition: 0.4s ease;
       list-style: none;
     }
@@ -170,6 +140,7 @@
       visibility: visible;
     }
 
+    /* ===== MOBILE RESPONSIVE ===== */
     @media (max-width: 768px) {
       .container {
         height: auto;
@@ -223,25 +194,25 @@
     }
   </style>
 </head>
-
 <body>
 
-<!-- WAVE TITLE BOX -->
-<div class="title-box">
-  <h1 class="wave-title">
-    <span class="wave">
-      W<span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
-      <span> </span>
-      <span>T</span><span>o</span>
-      <span> </span>
-      <span>M</span><span>y</span>
-      <span> </span>
-      <span>W</span><span>e</span><span>b</span><span>s</span><span>i</span><span>t</span><span>e</span>
-    </span>
-  </h1>
-</div>
+<!-- 🎵 BACKGROUND MUSIC -->
+<audio autoplay loop hidden>
+  <source src="Christmas.mp3" type="audio/mpeg">
+</audio>
 
-<h1 class="subtitle">
+<!-- TITLE -->
+<h1>
+  <span class="wave">
+    W<span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+    <span> </span>
+    <span>T</span><span>o</span>
+    <span> </span>
+    M<span>y</span>
+    <span> </span>
+    P<span>a</span><span>g</span><span>e</span>
+  </span>
+  <br>
   My Journey and My Family Who Inspire Me
 </h1>
 
@@ -249,35 +220,41 @@
 <ul class="container">
   <li>
     <img src="family.jpg" alt="">
-    <div class="content"><h2>Sarupan Family</h2></div>
+    <div class="content">
+      <h2>Sarupan Family</h2>
+    </div>
   </li>
-
   <li>
     <img src="ej.jpg" alt="">
-    <div class="content"><h2>Eunice Joanna V. Sarupan</h2></div>
+    <div class="content">
+      <h2>Eunice Joanna V. Sarupan</h2>
+    </div>
   </li>
-
   <li>
     <img src="mommy.jpg" alt="">
-    <div class="content"><h2>Mommy Quiz</h2></div>
+    <div class="content">
+      <h2>Mommy Quiz</h2>
+    </div>
   </li>
-
   <li>
     <img src="dad.jpg" alt="">
-    <div class="content"><h2>Daddy Gesan</h2></div>
+    <div class="content">
+      <h2>Daddy Gesan</h2>
+    </div>
   </li>
 </ul>
 
 <!-- SOCIAL LINKS -->
 <a class="social-link" href="https://www.facebook.com/share/19MLbASeCf/" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
   Follow me on Facebook to see my animations and artwork!
 </a>
 
 <a class="social-link" href="https://www.youtube.com/@TrufflesArtWorks" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png">
-  Explore my YouTube channel! Please subscribe to support my creative journey.
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
+  Explore my YouTube channel! If you enjoy my work, please subscribe to support my creative journey.
 </a>
-
+<button onclick="document.getElementById('bgm').play()">Let me share my Merry Christmas song with you!</button>
+<audio id="bgm" src="Christmas.mp3" loop></audio>
 </body>
 </html>
