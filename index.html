@@ -183,16 +183,18 @@
 </head>
 <body>
 
-<!-- Background Music -->
-  <audio id="bgMusic" loop>
-    <source src="Christmas.mp3" type="audio/mpeg">
-  </audio>
 
-  <script>
-    document.body.addEventListener('click', () => {
-      document.getElementById('bgMusic').play();
-    }, { once: true }); // plays on first click
-  </script>
+<audio id="bgMusic" loop>
+  <source src="Christmas.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Play music on first click anywhere
+  document.body.addEventListener('click', () => {
+    const music = document.getElementById('bgMusic');
+    music.play().catch(() => console.log('Autoplay blocked'));
+  }, { once: true });
+</script>
 
 <!-- TITLE: MARQUEE + WAVE -->
 <h1>
@@ -252,4 +254,5 @@
 
 </body>
 </html>
+
 
