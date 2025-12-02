@@ -18,13 +18,13 @@
 
     /* ===== TITLE ===== */
     h1 {
-      color: white;
       font-size: 2rem;
       text-align: center;
       margin-bottom: 40px;
       line-height: 1.5;
       overflow: hidden;
       white-space: nowrap;
+      color: white;
     }
 
     /* ===== MARQUEE EFFECT ===== */
@@ -47,6 +47,22 @@
     @keyframes wave {
       0%, 60%, 100% { transform: translateY(0); }
       30% { transform: translateY(-15px); }
+    }
+
+    /* ===== COLOR ANIMATION FOR SUBTITLE ===== */
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+      animation: colorchange 3s linear infinite;
+    }
+
+    @keyframes colorchange {
+      0% { color: #ffffff; }
+      20% { color: #ffeb3b; }
+      40% { color: #ff5722; }
+      60% { color: #4caf50; }
+      80% { color: #00bcd4; }
+      100% { color: #ffffff; }
     }
 
     /* ===== GALLERY CONTAINER ===== */
@@ -186,7 +202,7 @@
     </span>
   </div>
   <br>
-  My Journey and My Family 
+  <span class="subtitle">My Journey and My Family</span>
 </h1>
 
 <!-- GALLERY -->
@@ -230,4 +246,3 @@
 
 </body>
 </html>
-
