@@ -183,10 +183,16 @@
 </head>
 <body>
 
-<!-- 🎵 BACKGROUND MUSIC -->
-<audio autoplay loop hidden>
-  <source src="Christmas.mp3" type="audio/mpeg">
-</audio>
+<!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="Christmas.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    document.body.addEventListener('click', () => {
+      document.getElementById('bgMusic').play();
+    }, { once: true }); // plays on first click
+  </script>
 
 <!-- TITLE: MARQUEE + WAVE -->
 <h1>
@@ -246,3 +252,4 @@
 
 </body>
 </html>
+
