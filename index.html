@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Follow Me</title>
   <style>
-    /* ===== GLOBAL ===== */
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
@@ -16,7 +15,6 @@
       align-items: center;
     }
 
-    /* ===== TITLE ===== */
     h1 {
       font-size: 2rem;
       text-align: center;
@@ -27,7 +25,6 @@
       color: white;
     }
 
-    /* ===== MARQUEE EFFECT ===== */
     .marquee {
       display: inline-block;
       animation: marquee 10s linear infinite;
@@ -38,7 +35,6 @@
       100% { transform: translateX(-100%); }
     }
 
-    /* ===== WAVE EFFECT ===== */
     .wave span {
       display: inline-block;
       animation: wave 1.5s infinite;
@@ -49,23 +45,12 @@
       30% { transform: translateY(-15px); }
     }
 
-    /* ===== COLOR ANIMATION FOR SUBTITLE ===== */
     .subtitle {
       font-size: 1.5rem;
       font-weight: bold;
-      animation: colorchange 3s linear infinite;
+      color: white;
     }
 
-    @keyframes colorchange {
-      0% { color: #ffffff; }
-      20% { color: #ffeb3b; }
-      40% { color: #ff5722; }
-      60% { color: #4caf50; }
-      80% { color: #00bcd4; }
-      100% { color: #ffffff; }
-    }
-
-    /* ===== GALLERY CONTAINER ===== */
     .container {
       width: 100%;
       max-width: 900px;
@@ -127,7 +112,6 @@
       visibility: visible;
     }
 
-    /* ===== MOBILE RESPONSIVE ===== */
     @media (max-width: 768px) {
       .container {
         height: auto;
@@ -155,7 +139,6 @@
       }
     }
 
-    /* ===== SOCIAL LINKS ===== */
     .social-link {
       display: flex;
       align-items: center;
@@ -183,20 +166,6 @@
 </head>
 <body>
 
-
-<audio id="bgMusic" loop>
-  <source src="Christmas.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-  // Play music on first click anywhere
-  document.body.addEventListener('click', () => {
-    const music = document.getElementById('bgMusic');
-    music.play().catch(() => console.log('Autoplay blocked'));
-  }, { once: true });
-</script>
-
-<!-- TITLE: MARQUEE + WAVE -->
 <h1>
   <div class="marquee">
     <span class="wave">
@@ -213,24 +182,29 @@
   <span class="subtitle">My Journey and My Family</span>
 </h1>
 
-<!-- GALLERY -->
 <ul class="container">
   <li>
-    <img src="family.jpg" alt="">
-    <div class="content">
-      <h2>Sarupan Family</h2>
-    </div>
-  </li>
-  <li>
-    <img src="ej.jpg" alt="">
+    <img src="family.jpg" alt="Sarupan Family">
     <div class="content">
       <h2>
-        <a href="https://www.facebook.com/profile.php?id=61579091247710&sk=about" target="_blank" style="color: inherit; text-decoration: none;">
-          Eunice Joanna V. Sarupan
+        <a href="fambg.jpg" target="_blank" style="color: inherit; text-decoration: none;">
+          Sarupan Family
         </a>
       </h2>
     </div>
   </li>
+
+  <li>
+    <img src="ej.jpg" alt="">
+    <div class="content">
+      <h2>
+        <a href="ejbg.jpg" target="_blank" style="color: inherit; text-decoration: none;">
+          Eunice Joanna 
+        </a>
+      </h2>
+    </div>
+  </li>
+
   <li>
     <img src="mommy.jpg" alt="">
     <div class="content">
@@ -241,6 +215,7 @@
       </h2>
     </div>
   </li>
+
   <li>
     <img src="dad.jpg" alt="">
     <div class="content">
@@ -253,25 +228,17 @@
   </li>
 </ul>
 
-<!-- SOCIAL LINKS -->
 <div style="margin-top: 50px; display: flex; flex-direction: column; gap: 15px; align-items: center;">
-  <a class="social-link" href="https://www.facebook.com/share/19MLbASeCf/" target="_blank" 
-     style="display: flex; justify-content: center; align-items: center; text-align: center;">
+  <a class="social-link" href="https://www.facebook.com/share/19MLbASeCf/" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
     <span>Follow me on Facebook to see my animations and artwork!</span>
   </a>
 
-  <a class="social-link" href="https://www.youtube.com/@TrufflesArtWorks" target="_blank" 
-     style="display: flex; justify-content: center; align-items: center; text-align: center;">
+  <a class="social-link" href="https://www.youtube.com/@TrufflesArtWorks" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
     <span>Explore my YouTube channel! If you enjoy my work, please subscribe to support my creative journey.</span>
   </a>
 </div>
+
 </body>
 </html>
-
-
-
-
-
-
